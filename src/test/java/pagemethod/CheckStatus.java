@@ -48,7 +48,7 @@ public class CheckStatus extends LocatorsTest{
 		
 		public void afterReachTrainDestinationtoCheckStatus() {
 
-			wait.until(ExpectedConditions.visibilityOf(dropDown));
+			//wait.until(ExpectedConditions.visibilityOf(dropDown));
 			dropDown.click();
 
 			wait.until(ExpectedConditions.visibilityOf(selectValue));

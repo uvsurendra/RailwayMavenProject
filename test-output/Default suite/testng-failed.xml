@@ -3,16 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.TimeTableoftheTrain">
+      <class name="testcases.StatusCheck">
         <methods>
-          <include name="verifyFoodDetails"/>
-          <include name="verifyTrainDetails"/>
-          <include name="verifyTimeTableDetails"/>
-          <include name="verifyPlatformDetails"/>
+          <include name="checkStatuss"/>
           <include name="tearDown"/>
-          <include name="verifyEnteringTrainDetails"/>
         </methods>
-      </class> <!-- testcases.TimeTableoftheTrain -->
+      </class> <!-- testcases.StatusCheck -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

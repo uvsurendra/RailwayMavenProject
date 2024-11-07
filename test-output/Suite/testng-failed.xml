@@ -3,13 +3,12 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="org.sample.RailwayMavenProject.TrainStatus">
+      <class name="testcases.StatusCheck">
         <methods>
-          <include name="closePage"/>
-          <include name="launchBrowser"/>
-          <include name="trackingTrain"/>
+          <include name="checkStatuss"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- org.sample.RailwayMavenProject.TrainStatus -->
+      </class> <!-- testcases.StatusCheck -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

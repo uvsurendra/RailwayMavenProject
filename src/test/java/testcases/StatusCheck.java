@@ -2,16 +2,17 @@ package testcases;
 
 import java.io.IOException;
 
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.*;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+
 
 import locators.LocatorsTest;
 import pagemethod.CheckStatus;
 import base.TestBase;
 
-//@Listeners(failedscreenshots.Listener.class)
+@Listeners(failedscreenshots.ListenerClass.class)
 
 public class StatusCheck extends TestBase{
 	
