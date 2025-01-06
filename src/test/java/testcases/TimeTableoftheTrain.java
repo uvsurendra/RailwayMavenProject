@@ -40,7 +40,6 @@ public class TimeTableoftheTrain extends TestBase{
 	
 	@Test(priority = 4)
 	public void verifyFoodDetails() {
-		
 		timeTable.foodInformation();
 		
 	}
@@ -48,7 +47,7 @@ public class TimeTableoftheTrain extends TestBase{
 	@Test(priority = 5)
 	public void verifyTimeTableDetails() {
 		
-		timeTable.checkTimeTable();;
+		timeTable.checkTimeTable();
 		
 	}
 	

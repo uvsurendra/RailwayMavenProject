@@ -13,8 +13,6 @@ import org.testng.annotations.Listeners;
 
 import locators.LocatorsTest;
 
-
-
 public class TrainTimeTable extends LocatorsTest {
 
 	public WebDriverWait wait;
@@ -23,6 +21,7 @@ public class TrainTimeTable extends LocatorsTest {
 	public String trainNum = "17256";
 	public String expectedTrainName = "NARASAPUR EXP";
 	public Actions actions;
+	public String stationName;
 	public String expectedTimeTable = "STATION ARRIVES HALT TIME DEPARTS PLATFORM LOCOMOTIVE REVERSE\r\n"
 			+ "Narasapur (NS) ------- START 11:15 1 NO\r\n" + "Palakollu (PKO) 11:23 2 MINS 11:25 2 NO\r\n"
 			+ "Bhimavaram Town (BVRT) 11:53 2 MINS 11:55 1 NO\r\n" + "Akividu (AKVD) 12:08 2 MINS 12:10 1 NO\r\n"
@@ -48,12 +47,12 @@ public class TrainTimeTable extends LocatorsTest {
 
 		wait.until(ExpectedConditions.visibilityOf(trainInformationDropdown));
 		trainInformationDropdown.click();
-		
+
 		wait.until(ExpectedConditions.visibilityOf(selectTimeTable));
 		selectTimeTable.click();
-		
+
 		wait.until(ExpectedConditions.visibilityOf(trainNameInputField));
-		//jsx.executeScript("arguments[0].scrollIntoView(true);", trainNameInputField);
+		// jsx.executeScript("arguments[0].scrollIntoView(true);", trainNameInputField);
 		trainNameInputField.sendKeys(trainNum);
 
 		actions.sendKeys(Keys.ENTER).perform();
@@ -73,9 +72,7 @@ public class TrainTimeTable extends LocatorsTest {
 
 		for (WebElement stationName : stationNames) {
 			System.out.println("How many stations will cover " + stationName.getText());
-
 		}
-
 		for (WebElement trainTime : trainTimings) {
 			System.out.println("Station Timings " + trainTime.getText());
 		}
@@ -105,7 +102,6 @@ public class TrainTimeTable extends LocatorsTest {
 				System.out.println("Time is " + time);
 				System.out.println(trainNum + " " + expectedTrainName + " train next station will be stop at "
 						+ stationName + " on platform " + PFNumber + " at " + time);
-				
 
 			} else if (lines.length == 4) {
 				// Get station name
@@ -170,12 +166,10 @@ public class TrainTimeTable extends LocatorsTest {
 	}
 
 	public void checkTimeTable() {
-		
-		
+
 		String timeTable = actualTimeTable.getText();
 		System.out.println("Time table is " + timeTable);
-		//Assert.assertTrue(timeTable.contains(expectedTimeTable));
-		
+		// Assert.assertTrue(timeTable.contains(expectedTimeTable));
 
 	}
 }

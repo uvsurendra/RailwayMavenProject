@@ -55,7 +55,7 @@ public class LocatorsTest extends TestBase {
 	@FindBy(xpath = "(//ul[@class='popup_list']/li[3])[1]")
 	public WebElement selectTimeTable;
 	
-	@FindBy(id ="train")
+	@FindBy(id ="trainname")
 	public WebElement trainNameInputField;
 	
 	@FindBy(xpath ="//h1[contains(@class,'MuiTypography-root ')]")
@@ -95,9 +95,5 @@ public class LocatorsTest extends TestBase {
 	
 	@FindBy(xpath ="//div[@class='result_blueLine__voCzw']/following::div[1]/div/div/h2")
 	public List<WebElement> afterTrackingRemaingStations;
-	
-	
-	
-	
 	
 }
